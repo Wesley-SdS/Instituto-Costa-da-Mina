@@ -12,7 +12,7 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4.17-38bdf8?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
 [![shadcn/ui](https://img.shields.io/badge/shadcn/ui-Latest-000000?style=for-the-badge&logo=shadcnui)](https://ui.shadcn.com/)
 
-[Demo ao Vivo](#) • [Reportar Bug](https://github.com/seu-usuario/instituto-costa-da-mina/issues) • [Solicitar Feature](https://github.com/seu-usuario/instituto-costa-da-mina/issues)
+[Demo ao Vivo](#)
 
 </div>
 
@@ -32,7 +32,6 @@
 - [Customização](#-customização)
 - [Performance](#-performance)
 - [Acessibilidade](#-acessibilidade)
-- [Contribuindo](#-contribuindo)
 - [Licença](#-licença)
 - [Contato](#-contato)
 
@@ -126,10 +125,9 @@ pnpm --version
 
 ## 🚀 Instalação
 
-### 1. Clone o repositório
+### 1. Acesse o diretório do projeto
 
 ```bash
-git clone https://github.com/seu-usuario/instituto-costa-da-mina-landing-page.git
 cd instituto-costa-da-mina-landing-page
 ```
 
@@ -206,8 +204,6 @@ pnpm start
 ### Deploy
 
 #### Vercel (Recomendado)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/seu-usuario/instituto-costa-da-mina-landing-page)
 
 ```bash
 # Usando Vercel CLI
@@ -529,62 +525,6 @@ npx lighthouse http://localhost:3000 --view
 
 ---
 
-## 🤝 Contribuindo
-
-Contribuições são bem-vindas! Siga estas etapas:
-
-### 1. Fork o projeto
-
-```bash
-# Via GitHub UI ou CLI
-gh repo fork seu-usuario/instituto-costa-da-mina-landing-page
-```
-
-### 2. Crie uma branch
-
-```bash
-git checkout -b feature/minha-feature
-# ou
-git checkout -b fix/meu-fix
-```
-
-### 3. Commit suas mudanças
-
-```bash
-git add .
-git commit -m "feat: adiciona nova seção de depoimentos"
-```
-
-Use **Conventional Commits**:
-
-- `feat`: Nova feature
-- `fix`: Correção de bug
-- `docs`: Documentação
-- `style`: Formatação
-- `refactor`: Refatoração
-- `perf`: Performance
-- `test`: Testes
-- `chore`: Manutenção
-
-### 4. Push para o repositório
-
-```bash
-git push origin feature/minha-feature
-```
-
-### 5. Abra um Pull Request
-
-Descreva suas mudanças detalhadamente e aguarde review.
-
-### Diretrizes
-
-- Siga o estilo de código existente
-- Adicione testes se aplicável
-- Atualize a documentação
-- Mantenha commits atômicos e descritivos
-
----
-
 ## 📄 Licença
 
 Este projeto está sob a licença **MIT**. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
@@ -613,18 +553,9 @@ in the Software without restriction...
   - [Facebook](https://facebook.com/institutocostadamina)
   - [LinkedIn](https://linkedin.com/company/institutocostadamina)
 
-### Desenvolvedor
-
-- 👤 **Nome**: Seu Nome
-- 📧 **Email**: seu-email@exemplo.com
-- 🔗 **GitHub**: [@seu-usuario](https://github.com/seu-usuario)
-- 💼 **LinkedIn**: [Seu Perfil](https://linkedin.com/in/seu-perfil)
-
 ---
 
 <div align="center">
-
-### 🌟 Se este projeto foi útil, deixe uma estrela! 
 
 **Feito com ❤️ e dedicação para o Instituto Costa da Mina**
 
