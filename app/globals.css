@@ -1,0 +1,229 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Brand Colors (raw hex for direct use) */
+    --brand-purple: #6A0D74;
+    --brand-purple-light: #8B2F96;
+    --brand-purple-dark: #4A0952;
+    --brand-yellow: #FED501;
+    --brand-yellow-light: #FFDF33;
+    --brand-yellow-dark: #D4B200;
+
+    /* shadcn Design Tokens — Light Theme */
+    --background: 260 18% 97%;
+    --foreground: 280 17% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 280 17% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 280 17% 10%;
+    --primary: 294 80% 25%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 50 99% 50%;
+    --secondary-foreground: 294 83% 18%;
+    --muted: 270 14% 94%;
+    --muted-foreground: 274 12% 34%;
+    --accent: 294 80% 25% / 0.12;
+    --accent-foreground: 294 80% 25%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 267 11% 88%;
+    --input: 267 11% 88%;
+    --ring: 294 80% 25%;
+    --radius: 0.75rem;
+
+    /* Extended Theme Tokens */
+    --surface-alt: 0 0% 100%;
+    --highlight: 50 99% 50%;
+    --highlight-foreground: 294 83% 18%;
+    --decorative-line: var(--brand-purple);
+
+    --chart-1: 294 80% 25%;
+    --chart-2: 50 99% 50%;
+    --chart-3: 293 52% 39%;
+    --chart-4: 50 100% 60%;
+    --chart-5: 274 8% 76%;
+
+    --sidebar-background: 260 18% 97%;
+    --sidebar-foreground: 280 17% 10%;
+    --sidebar-primary: 294 80% 25%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 270 14% 94%;
+    --sidebar-accent-foreground: 294 80% 25%;
+    --sidebar-border: 267 11% 88%;
+    --sidebar-ring: 294 80% 25%;
+  }
+
+  .dark {
+    --background: 280 17% 10%;
+    --foreground: 270 14% 94%;
+    --card: 284 12% 17%;
+    --card-foreground: 270 14% 94%;
+    --popover: 284 12% 17%;
+    --popover-foreground: 270 14% 94%;
+    --primary: 50 99% 50%;
+    --primary-foreground: 294 83% 18%;
+    --secondary: 293 52% 39%;
+    --secondary-foreground: 270 14% 94%;
+    --muted: 284 12% 17%;
+    --muted-foreground: 274 8% 76%;
+    --accent: 50 99% 50% / 0.08;
+    --accent-foreground: 50 99% 50%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 278 12% 23%;
+    --input: 278 12% 23%;
+    --ring: 50 99% 50%;
+
+    --surface-alt: 284 12% 17%;
+    --highlight: 50 99% 50%;
+    --highlight-foreground: 294 83% 18%;
+    --decorative-line: var(--brand-yellow);
+
+    --chart-1: 50 99% 50%;
+    --chart-2: 293 52% 39%;
+    --chart-3: 50 100% 60%;
+    --chart-4: 294 80% 25%;
+    --chart-5: 274 8% 76%;
+
+    --sidebar-background: 280 17% 10%;
+    --sidebar-foreground: 270 14% 94%;
+    --sidebar-primary: 50 99% 50%;
+    --sidebar-primary-foreground: 294 83% 18%;
+    --sidebar-accent: 284 12% 17%;
+    --sidebar-accent-foreground: 50 99% 50%;
+    --sidebar-border: 278 12% 23%;
+    --sidebar-ring: 50 99% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    line-height: 1.7;
+    transition: background-color 300ms ease, color 300ms ease;
+  }
+
+  ::selection {
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .decorative-line {
+    height: 3px;
+    background: linear-gradient(90deg, var(--decorative-line), hsl(var(--secondary)));
+    border: none;
+  }
+
+  .highlight-box {
+    background-color: hsl(var(--highlight));
+    color: hsl(var(--highlight-foreground));
+    padding: 1.5rem 2rem;
+    border-radius: var(--radius);
+    font-weight: 600;
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.7s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.7s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.5s ease-out forwards;
+}
+
+.animate-slide-left {
+  animation: slideInLeft 0.7s ease-out forwards;
+}
+
+.animate-slide-right {
+  animation: slideInRight 0.7s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Stagger delays for children */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
